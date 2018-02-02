@@ -14,7 +14,7 @@ public class RadiusChangingCircle extends CircleShape{
 	 */
   public RadiusChangingCircle(){
     super();
-		this.color = new java.awt.Color(0,0,255,100); // transparent blue
+		this.color = new java.awt.Color(255,0,255,100); // transparent blue
   }
 
 	/**
