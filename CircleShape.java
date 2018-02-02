@@ -77,7 +77,6 @@ public class CircleShape {
 			// change the properties of the CircleShape after dt seconds have elapsed.
 			this.x += dt*vx;  // for now they do not move
 			this.y += dt*vy;
-
 			this.keepOnBoard();
 		}
 
