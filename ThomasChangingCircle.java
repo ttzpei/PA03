@@ -1,5 +1,10 @@
 package PA03;
 
+/**
+This creates a set of random circles that bounce from left-to-right
+and decrease in size whenever they pass through the center.
+*/
+
 
 public class ThomasChangingCircle extends CircleShape{
 
@@ -10,7 +15,6 @@ public class ThomasChangingCircle extends CircleShape{
   public ThomasChangingCircle(){
     super();
 		this.color = new java.awt.Color(255,100,150,200);
-    this.x = 0;
     this.y = (int)(500*Math.random());
     this.radius = 40;
     this.vx = 100;
@@ -18,7 +22,7 @@ public class ThomasChangingCircle extends CircleShape{
   }
 
   public void update(double dt){
-    this.x += dt*vx;  // for now they do not move
+    this.x += dt*vx;
     this.y += dt*vy;
     if(this.x >= 200 && this.x < 250){
       warp1();
