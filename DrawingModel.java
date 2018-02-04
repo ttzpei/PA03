@@ -53,7 +53,7 @@ public class DrawingModel {
 		@param g the Graphics object used to draw the objects in the model
 	*/
 	public void draw(Graphics g){
-		g.setColor(Color.green);
+		g.setColor(Color.black);
 		g.drawRect(0,0,500,500);
 
 		for(int i=0; i<numCircles; i++){
