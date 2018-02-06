@@ -57,7 +57,7 @@ public class ThomasChangingCircle extends CircleShape{
   }
 
   public void warp1(){
-    this.radius += midWayRadius;
+    this.radius -= midWayRadius;
   }
 
   public void warp2(){
