@@ -17,7 +17,6 @@ public class ThomasChangingCircle extends CircleShape{
   public ThomasChangingCircle(){
     super();
 		this.color = new java.awt.Color(255,100,150,200);
-    this.y = (int)(500*Math.random());
     this.radius = 40;
     this.vx = 100;
     this.vy = 0;
@@ -62,7 +61,7 @@ public class ThomasChangingCircle extends CircleShape{
   }
 
   public void warp2(){
-    this.radius += midWayRadius;
+    this.radius -= midWayRadius;
   }
 
 

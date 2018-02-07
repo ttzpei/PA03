@@ -1,17 +1,19 @@
-package pa03;
+package PA03;
 
-import java.awt.Color;
+//import java.awt.Color; // Don't need to import the color, its included when you call in super()
+//also I added your code to the DrawingModel file so it can run.
 
 public class ChenCircle extends CircleShape{
 
-	private double vr = 0.7;
+	private double vr = 10;
+
 	public ChenCircle(){
 		super();
-		this.color = new java.awt.Color(255,100,20,70);
+		this.color = new java.awt.Color(255,100,20,200);
 	}
 
 	public void update(double dt){
-		this.radius *= dt*vr;
+		this.radius += dt*vr; // made it +=; *= won't produce the balls.
 		if (this.radius <= 100 || this.radius >= 500){
 			this.x += vr;
 			this.y += vr * 2;
