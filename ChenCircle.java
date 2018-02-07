@@ -1,8 +1,5 @@
 package PA03;
 
-//import java.awt.Color; // Don't need to import the color, its included when you call in super()
-//also I added your code to the DrawingModel file so it can run.
-
 public class ChenCircle extends CircleShape{
 
 	private double vr = 10;
