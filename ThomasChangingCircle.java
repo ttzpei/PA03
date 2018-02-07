@@ -43,6 +43,7 @@ public class ThomasChangingCircle extends CircleShape{
 
   /**
   This method updates the circle for each frame. In addition if the x value
+  @param dt This represents a frame for the program
   */
 
   public void update(double dt){
