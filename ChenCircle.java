@@ -16,10 +16,10 @@ public class ChenCircle extends CircleShape{
 		this.radius -= dt / c; // made it +=; *= won't produce the balls.
 
 		if (this.radius % 20 <= 10){
-			this.x += 2;
+			
 			this.y += dt;
 		} else if (this.radius % 20 >= 10 && this.radius % 20 <= 20){
-			this.x += 2;
+			
 			this.y -= dt;
 		}
 		super.update(dt);
