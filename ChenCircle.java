@@ -3,7 +3,6 @@ package PA03;
 
 public class ChenCircle extends CircleShape{
 
-	private double vr = 2;
 	private double c = 10;
 
 	public ChenCircle(){
@@ -11,7 +10,7 @@ public class ChenCircle extends CircleShape{
 		this.color = new java.awt.Color(25,216,251,100);
 		this.x = 250;
 		this.vx = 0;
-		this.vy = 50;
+		this.vy = -50;
 	}
 
 	public void update(double dt){
@@ -19,15 +18,8 @@ public class ChenCircle extends CircleShape{
 		this.radius -= dt / c; // made it +=; *= won't produce the balls.
 
 		if (this.radius % 20 <= 10){
-<<<<<<< HEAD
-			
 			this.y += dt;
 		} else if (this.radius % 20 >= 10 && this.radius % 20 <= 20){
-			
-=======
-			this.y += dt;
-		} else if (this.radius % 20 >= 10 && this.radius % 20 <= 20){
->>>>>>> 9e69f4591b62ad0f2300ed0cfb2180cfec843650
 			this.y -= dt;
 		}
 		super.update(dt);
