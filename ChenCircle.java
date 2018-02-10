@@ -1,4 +1,4 @@
-package pa03;
+package PA03;
 
 
 public class ChenCircle extends CircleShape{
@@ -14,7 +14,7 @@ public class ChenCircle extends CircleShape{
 	public void update(double dt){
 
 		this.radius -= dt / c; // made it +=; *= won't produce the balls.
-		
+
 		if (this.radius % 20 <= 10){
 			this.x += 2;
 			this.y += dt;
