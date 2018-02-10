@@ -48,19 +48,17 @@ public class ThomasChangingCircle extends CircleShape{
   public void update(double dt){
     this.x += dt*vx;
     this.y += dt*vy;
-    if(this.x >= 100 && this.x < 250){
-      warp1();
-    }else if(this.x>250 && this.x <= 400){
-      warp2();
+    if(this.x >= 100 && this.x < 400){
+      warp();
     }
     super.update(dt);
   }
 
-  public void warp1(){
-    this.radius -= midWayRadius;
-  }
-
-  public void warp2(){
+  /**
+  This method reduces the radius of the circles as they pass through the area
+  in the center from 100 to 400
+  */
+  public void warp(){
     this.radius -= midWayRadius;
   }
 
