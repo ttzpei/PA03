@@ -9,6 +9,7 @@ and decrease in size whenever they pass through the center.
 public class ThomasChangingCircle extends CircleShape{
 
   private double midWayRadius = .10;
+  private int trueTrue = 1;
 
   /**
   Makes a random set of pink circles that move from left to right
@@ -41,7 +42,9 @@ public class ThomasChangingCircle extends CircleShape{
   }
 
   /**
-  This method updates the circle for each frame. In addition if the x value
+  This method updates the circle for each frame. In addition if the x value falls
+  between 100 and 400, then the circles either become larger or smaller based
+  on their radius
   @param dt This represents a frame for the program
   */
 
@@ -49,7 +52,11 @@ public class ThomasChangingCircle extends CircleShape{
     this.x += dt*vx;
     this.y += dt*vy;
     if(this.x >= 100 && this.x < 400){
-      warp();
+      if(this.trueTrue == 1){
+        warp();
+      }else if(this.trueTrue == 0){
+        warp2();
+      }
     }
     super.update(dt);
   }
@@ -59,7 +66,22 @@ public class ThomasChangingCircle extends CircleShape{
   in the center from 100 to 400
   */
   public void warp(){
+    if(this.radius <= 10){
+      this.trueTrue = 0;
+    }
     this.radius -= midWayRadius;
+  }
+
+
+  /**
+  This method increases the radius of the circles as they pass through the area
+  in the center from 100 to 400
+  */
+  public void warp2(){
+    if(this.radius >= 40){
+      this.trueTrue = 1;
+    }
+    this.radius += midWayRadius;
   }
 
 
