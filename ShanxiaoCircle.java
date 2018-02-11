@@ -5,7 +5,7 @@ public class ShanxiaoCircle extends CircleShape{
   private double circleValue = 0.38;
 
   /**
-  Makes a random set of green circles that move from left to right
+  Makes a random set of green circles that move from top to bottom
   */
 
   public ShanxiaoCircle(){
